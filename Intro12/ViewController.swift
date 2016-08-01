@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    // MARK: Properties
+    // MARK: Properties 
     @IBOutlet weak var myImageView: UIImageView!
 
     
