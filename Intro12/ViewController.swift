@@ -26,27 +26,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // MARK: UIImagePickerControllerDelegate
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         
         myImageView.image = image
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
     // MARK: Action
-    @IBAction func choosePicture(sender: UITapGestureRecognizer) {
+    @IBAction func choosePicture(_ sender: UITapGestureRecognizer) {
         
         let myImagePickerController = UIImagePickerController()
         
-        myImagePickerController.sourceType = .PhotoLibrary
+        myImagePickerController.sourceType = .photoLibrary
         myImagePickerController.delegate = self
         
-        presentViewController(myImagePickerController, animated: true, completion: nil)
+        present(myImagePickerController, animated: true, completion: nil)
         
     }
     
